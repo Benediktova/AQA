@@ -10,7 +10,7 @@ public class Task_3 {
      */
     //public static void main(String[] args){
     public void printColor() {
-    int value = 0;
+    int value = 101;
     if (value <= 0) {
         System.out.println("Красный");
     } else if (value > 0 && value <= 100) {

@@ -8,7 +8,7 @@ public class Task_2 {
      */
     //public static void main(String[] args){
     public void checkSumSign() {
-        int a = -10;
+        int a = 10;
         int b = 1;
         int sum = a + b;
         if (sum >= 0) {

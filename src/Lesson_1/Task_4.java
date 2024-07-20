@@ -11,7 +11,7 @@ public class Task_4 {
     //public static void main(String[] args) {
     public void compareNumbers() {
         int a = 22;
-        int b = 2;
+        int b = 112;
         if (a >= b) {
             System.out.println("a >= b");
         } else  {
