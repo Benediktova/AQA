@@ -6,14 +6,15 @@ public class Task_3 {
     Метод должен вернуть true, если число отрицательное, и вернуть false если положительное.
      */
 
-    public static boolean booleanValue(int a) {
-        return a < 0 ? true : false;
-
-    }
-
     public static void main(String[] args) {
         int a = -1;
-        boolean result = booleanValue (a);
+        boolean result = booleanValue(a);
         System.out.println(result);
     }
+
+    public static boolean booleanValue(int a) {
+        return a < 0 ? true : false;
+    }
 }
+
+
