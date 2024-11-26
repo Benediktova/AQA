@@ -12,10 +12,7 @@ persArray[4] = new Person(...);
 С помощью цикла вывести информацию только о сотрудниках старше 40 лет.
 */
 public class Lesson_4 {
-    public Lesson_4() {
-    }
-
-    public static void main(String[] args) {
+      public static void main(String[] args) {
         Employee[] employeesArray = new Employee[]{
                 new Employee("Belyakova TO", "QA", "Belyakova@gmail.com", "+79541214568", 100000, 40),
                 new Employee("Ivanov EL", "QC", "Ivanov@gmail.com", "+79216547896", 110000, 39),
@@ -23,14 +20,10 @@ public class Lesson_4 {
                 new Employee("Sidorov IA", "BA", "Sidorov@gmail.com", "+7954748596", 130000, 56),
                 new Employee("Stepanova AC", "Dev", "Stepanova@gmail.com", "+79201247586", 140000, 27)
         };
-        Employee[] var2 = employeesArray;
-        int var3 = employeesArray.length;
-
-        for(int var4 = 0; var4 < var3; ++var4) {
-            Employee employee = var2[var4];
-            if (employee.Age > 40) {
-                employee.displayInformation();
-            }
-        }
-    }
+          for (Employee employee : employeesArray) {
+              if (employee.Age > 40) {
+                  employee.displayInformation();
+              }
+          }
+      }
 }
