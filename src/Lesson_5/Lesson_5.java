@@ -22,12 +22,12 @@ public class Lesson_5 {
         System.out.println("Задание №1: ");
 
         Dog dogSam = new Dog("Sam");
-        dogSam.run(300);
-        dogSam.swim(20);
+        dogSam.run(10);
+        dogSam.swim(-1);
 
         Cat catKris = new Cat("Kris");
         catKris.run(250);
-        catKris.swim(10);
+        catKris.swim(5);
 
         Bowl bowl = new Bowl(15);
 
@@ -71,20 +71,21 @@ public class Lesson_5 {
 Попробуйте реализовать базовые методы, такие как расчет периметра фигур, в качестве дефолтных методов в интерфейсе.
 */
 
-        Shape circle = new Circle(10);
-        circle.setFillColor("Зеленый");
-        circle.setBorderColor("Чёрный");
+        Shape circle = new Circle(5, "Зеленый", "Чёрный");
+        Shape rectangle = new Rectangle(4, 6, "Голубой", "Синий");
+        Shape triangle = new Triangle(3, 4, 5, "Розовый", "Фиолетовый");
 
-        Shape rectangle = new Rectangle(2, 8);
-        rectangle.setFillColor("Голубой");
-        rectangle.setBorderColor("Синий");
+        printShapeInfo(circle);
+        printShapeInfo(rectangle);
+        printShapeInfo(triangle);
+    }
 
-        Shape triangle = new Triangle(5, 7, 8);
-        triangle.setFillColor("Розовый");
-        triangle.setBorderColor("Фиолетовый");
-
-        System.out.println(circle);
-        System.out.println(rectangle);
-        System.out.println(triangle);
-        }
+    private static void printShapeInfo(Shape shape) {
+        System.out.println("Форма: " + shape.getClass().getSimpleName());
+        System.out.println("Периметр: " + shape.perimeter());
+        System.out.println("Площадь: " + shape.area());
+        System.out.println("Цвет заливки: " + shape.getFillColor());
+        System.out.println("Цвет границ: " + shape.getBorderColor());
+        System.out.println();
+    }
 }

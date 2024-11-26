@@ -1,6 +1,6 @@
 package Lesson_5;
 
-public class Cat extends Animals {
+ class Cat extends Animals {
     private static int catCount = 0;
     private String name;
     private boolean isFull;
@@ -17,19 +17,21 @@ public class Cat extends Animals {
     }
 
     @Override
-    public void run(int distance) {
-        if (distance <= 200) {
-            System.out.println(name + " пробежал " + distance + " м.");
+    void run(int distance) {
+        if (distance <= 0) {
+            System.out.println(name + " не может пробежать меньше 0 м");
+        } else if (distance > 0 && distance <= 200) {
+            System.out.println(name + " пробежал " + distance + " м");
         } else {
-            System.out.println(name + " не может пробежать больше 200 м.");
+            System.out.println(name + " не может пробежать больше 200 м");
         }
     }
 
     @Override
-    public void swim(int distance) {
+     void swim(int distance) {
         System.out.println(name + " не умеет плавать.");
     }
-    public void eat(Bowl bowl) {
+     void eat(Bowl bowl) {
         if (bowl.feedCat(5)) {
             isFull = true;
         }

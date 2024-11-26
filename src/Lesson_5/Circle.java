@@ -5,8 +5,10 @@ public class Circle implements Shape {
     private String fillColor;
     private String borderColor;
 
-    public Circle(double radius) {
+    public Circle(double radius , String fillColor, String borderColor) {
         this.radius = radius;
+        this.fillColor = fillColor;
+        this.borderColor = borderColor;
     }
     @Override
     public double area() {
@@ -17,16 +19,12 @@ public class Circle implements Shape {
         return 2 * Math.PI * radius;
     }
     @Override
-    public void setFillColor(String color) {
-        this.fillColor = color;
+    public String getFillColor() {
+        return fillColor;
     }
+
     @Override
-    public void setBorderColor(String color) {
-        this.borderColor = color;
-    }
-    @Override
-    public String toString() {
-        return String.format("Круг [Площадь: %.2f, Периметр: %.2f, Цвет заливки: %s, Цвет границы: %s]",
-                area(), perimeter(), fillColor, borderColor);
+    public String getBorderColor() {
+        return borderColor;
     }
 }

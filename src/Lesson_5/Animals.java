@@ -11,11 +11,6 @@ public abstract class Animals {
         return animalsCount;
     }
 
-    public void run(int distance) {
-        System.out.println("Животное пробежало " + distance + " м");
-    }
-
-    public void swim(int distance) {
-        System.out.println("Животное проплыло " + distance + " м");
-    }
+    abstract void run(int distance);
+    abstract void swim(int distance);
 }
