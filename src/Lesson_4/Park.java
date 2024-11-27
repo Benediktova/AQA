@@ -3,7 +3,7 @@ package Lesson_4;
 Создать класс Park с внутренним классом, с помощью объектов которого можно хранить информацию об аттракционах, времени их работы и стоимости.
  */
 public class Park {
-    public static class Attractions {
+    public class Attractions {
         private String nameAttraction;
         private String openingHours;
         private float price;
